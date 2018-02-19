@@ -9,15 +9,15 @@
 <body>
  <h4>ข้อมูลอุปกรณ์ที่ติดมากับรถ</h4>
       <hr>
-<form class="form-horizontal"  method="post" action="acc_list.php" enctype="multipart/form-data">
+<form class="form-horizontal"  method="post" action="acc_add_q.php" enctype="multipart/form-data">
 
   
 
 
 <div class="form-group row">
-      <label for="inputEmail3" class="col-sm-2 col-form-label">ชื่ออุปกรณ์ติดรถ</label>
+      <label for="inputEmail3" class="col-sm-2 col-form-label">ชื่ออุปกรณ์ติดมากับรถ</label>
       <div class="col-sm-10">
-         <input type="text"  name="id_student" class="form-control" id="id_student" placeholder="ชื่ออุปกรณ์ติดรถ" required="required">
+         <input type="text"  name="acc_name" class="form-control" id="acc_name" placeholder="ชื่ออุปกรณ์ติดมากับรถ" required="required">
      </div> 
 </div>
 
@@ -31,9 +31,10 @@
       <div class="form-group row">
       <label for="inputEmail3" class="col-sm-2 col-form-label"></label>
       <div class="col-sm-10">
-	   <button type="submit" class="btn btn-default"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> เพิ่มข้อมูล </button> 
-	   
-     </div> 
+        <label>
+        <input type="submit" name="Submit" value="เพิ่มข้อมูล" />
+       </label>
+      </div> 
 </div>
  
 

@@ -9,7 +9,7 @@
 <body>
  <h4>ข้อมูลเวลาให้บริการ</h4>
       <hr>
-<form class="form-horizontal"  method="post" action="" enctype="multipart/form-data">
+<form class="form-horizontal"  method="post" action="time_add_q.php" enctype="multipart/form-data">
 
   
 

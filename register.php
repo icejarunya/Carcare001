@@ -29,8 +29,8 @@
 	
 	<div class="form-group row">
       <label for="inputEmail3" class="col-sm-2 col-form-label"></label>
-      <div class="col-sm-8">เลขประจำตัวประชาชน
-         <input  name="cus_idcard" type="text" class="form-control" id="cus_idcard" maxlength="13" placeholder="เลขประจำตัวประชาชน" required="required">
+      <div class="col-sm-8">รหัสประจำตัวประชาชน
+         <input  name="cus_idcard" type="text" class="form-control" id="cus_idcard" maxlength="13" placeholder="รหัสประจำตัวประชาชน" required="required">
      </div> 
 </div>
 
