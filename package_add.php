@@ -9,7 +9,7 @@
 <body>
  <h4>ข้อมูลแพ็คเกจล้างรถ</h4>
       <hr>
-<form class="form-horizontal"  method="post" action="" enctype="multipart/form-data">
+<form class="form-horizontal"  method="post" action="package_add_q.php" enctype="multipart/form-data">
 
   
 
@@ -17,7 +17,7 @@
 <div class="form-group row">
       <label for="inputEmail3" class="col-sm-2 col-form-label">ชื่อแพ็คเกจ</label>
       <div class="col-sm-10">
-         <input type="text"  name="id_student" class="form-control" id="id_student" placeholder="ชื่อแพ็คเกจ" required="required">
+         <input type="text"  name="pack_name" class="form-control" id="pack_name" placeholder="ชื่อแพ็คเกจ" required="required">
      </div> 
 </div>
 	
@@ -26,7 +26,7 @@
   <div class="form-group row">
       <label for="inputEmail3" class="col-sm-2 col-form-label">รายละเอียด </label>
       <div class="col-sm-10">
-       <input type="text"  name="name_student" class="form-control" id="name_student" placeholder="รายละเอียด" required="required">
+       <input type="text"  name="pack_detail" class="form-control" id="pack_detail" placeholder="รายละเอียด" required="required">
 	   
      </div> 
 </div>
@@ -36,7 +36,7 @@
   <div class="form-group row">
       <label for="inputEmail3" class="col-sm-2 col-form-label">ราคา Member</label>
       <div class="col-sm-10">
-           <input type="text"  name="surename_student" class="form-control" id="surename_student" placeholder="ราคา Member" required="required">
+           <input type="text"  name="pack_member_price" class="form-control" id="pack_member_price" placeholder="ราคา Member" required="required">
 	   
      </div> 
 </div>
@@ -47,7 +47,7 @@
   <div class="form-group row">
       <label for="inputEmail3" class="col-sm-2 col-form-label"> ราคา Normal</label>
       <div class="col-sm-10">
-		    <input type="text"  name="surename_student" class="form-control" id="surename_student" placeholder="ราคา Normal" required="required">
+		    <input type="text"  name="pack_normal_price" class="form-control" id="pack_normal_price" placeholder="ราคา Normal" required="required">
      </div> 
 </div>
 
@@ -70,9 +70,10 @@
       <div class="form-group row">
       <label for="inputEmail3" class="col-sm-2 col-form-label"></label>
       <div class="col-sm-10">
-	   <button type="submit" class="btn btn-default"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> เพิ่มข้อมูล </button> 
-	   
-     </div> 
+        <label>
+        <input type="submit" name="Submit" value="เพิ่มข้อมูล" />
+       </label>
+      </div> 
 </div>
  
 
