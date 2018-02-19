@@ -9,15 +9,20 @@
 <body>
  <h4>ข้อมูลประเภทรถ</h4>
       <hr>
-<form class="form-horizontal"  method="post" action="" enctype="multipart/form-data">
+<form class="form-horizontal"  method="post" action="type_add_q.php" enctype="multipart/form-data">
 
   
 
 
 <div class="form-group row">
       <label for="inputEmail3" class="col-sm-2 col-form-label">ชื่อประเภทรถ</label>
-      <div class="col-sm-10">
-         <input type="text"  name="id_student" class="form-control" id="id_student" placeholder="ชื่อแพ็คเกจ" required="required">
+    <div class="col-sm-10">
+       <select name="type_name" id="type_name">
+         <option value="1">SUV</option>
+         <option value="2">Sedan</option>
+         <option value="3">Van</option>
+                            </select>
+       <label></label>
      </div> 
 </div>
 
@@ -40,9 +45,10 @@
       <div class="form-group row">
       <label for="inputEmail3" class="col-sm-2 col-form-label"></label>
       <div class="col-sm-10">
-	   <button type="submit" class="btn btn-default"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> เพิ่มข้อมูล </button> 
-	   
-     </div> 
+        <label>
+        <input type="submit" name="Submit" value="เพิ่มข้อมูล" />
+       </label>
+      </div> 
 </div>
  
 

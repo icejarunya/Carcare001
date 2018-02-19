@@ -1,4 +1,4 @@
-<?PHP include"header1.php";?>
+<?PHP include"header2.php";?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -97,9 +97,12 @@
       <div class="form-group row">
       <label for="inputEmail3" class="col-sm-2 col-form-label"></label>
       <div class="col-sm-10">
-	   <button type="submit" class="btn btn-default"> <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> เพิ่มข้อมูล </button> 
+	 
 	   
-     </div> 
+       <label>
+       <input type="submit" name="Submit" class="btn btn-default"  value="เพิ่มข้อมูล" />
+       </label>&nbsp; 
+      </div> 
 </div>
  
 
