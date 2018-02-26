@@ -6,8 +6,8 @@
    
       <h4>รายการข้อมูลผู้ใช้ระบบ</h4>
       <hr>
-      <h2><span class="glyphicon glyphicon-user"></span> รายการข้อมูลผู้ใช้ระบบ</h2>
-      <p> <a href="member_add.php" class="btn btn-default btn-sm"> <span class="glyphicon glyphicon-plus"></span> เพิ่มผู้ใช้ระบบ </a> &nbsp;</p>
+      <h2><span class="glyphicon glyphicon-user"></span> รายการข้อมูลดูแลระบบ</h2>
+      <p> <a href="member_add.php" class="btn btn-default btn-sm"> <span class="glyphicon glyphicon-plus"></span> เพิ่มผู้ดูแลระบบ </a> &nbsp;</p>
       <table width="100%" class="table table-striped">
         <thead>
           <tr>
