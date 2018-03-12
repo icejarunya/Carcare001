@@ -11,31 +11,52 @@
       <table width="100%" class="table table-striped">
         <thead>
           <tr>
-            <th width="10%">ลำดับที่  </th>
-            <th width="42%">ชื่อ - สกุล </th>
-            <th width="11%">ชื่อผู้ใช้</th>
-            <th width="19%" class="hidden-xs">เบอร์โทร</th>
-			<th width="18%" class="hidden-xs"><div align="right">จัดการ</div></th>
+            <th width="10%"><div align="center">ลำดับที่  </div></th>
+            <th width="42%"><div align="center">ชื่อ - สกุล </div></th>
+            <th width="11%"><div align="center">ชื่อผู้ใช้</div></th>
+            <th width="19%" class="hidden-xs"><div align="center">เบอร์โทร</div></th>
+			<th width="18%" class="hidden-xs"><div align="center">จัดการ</div></th>
           </tr>
         </thead>
         <tbody>
+		
+		
+<?PHP 
+include "config.inc.php"; 
+$sql="SELECT * FROM tbl_staff"; 
+$query = $conn->query($sql); 
+$i=0;
+while($result = $query->fetch_assoc()) 
+{ 
+$i++;
+?>
 
-          <tr>
-            <th scope="row"><div align="center">1</div></th>
-            <td>คุณอำนาจ เจริญ </td>
-            <td>aum122 </td>
-			<td> 089-9887877</td>
-			<td width="18%" class="hidden-xs"><div align="right"><a href="#" class="btn btn-danger btn-sm" onClick="return confirm('กรุณายืนยันการลบอีกครั้ง !!!')"> <span class="glyphicon glyphicon-trash"></span> ลบ </a> <a href="member_list_edit.php" class="btn btn-default btn-sm"> <span class="glyphicon glyphicon-edit"></span> แก้ไข </a> </div></td>
+  <tr>
+            <th scope="row"><div align="center"><?=$i;?></div></th>
+			
+            <td><div align="left"><?=$result['staff_name'];?></div></td>
+			
+			
+			
+            <td><div align="center"> <?=$result['staff_username'];?></div></td>
+			
+			<td class="hidden-xs"> <div align="center"><?=$result['staff_tel'];?></div></td>
+			
+			<td width="27%"><div align="center">
+			
+				<a href="member_del.php?cus_id=<?=$result['staff_id'];?>" class="btn btn-danger btn-sm" onClick="return confirm('กรุณายืนยันการลบอีกครั้ง !!!')"> <span class="glyphicon glyphicon-trash"></span> ลบ </a> 
+			
+			
+			
+			<a href="member_list_edit.php" class="btn btn-default btn-sm"> <span class="glyphicon glyphicon-edit"></span> แก้ไข </a>
+			
+			
+			
+
+			  
+			  </div></td>
           </tr>
-		  
-		  
-		  <tr>
-            <th scope="row"><div align="center">2</div></th>
-            <td>คุณธิดา ลาวรรณ </td>
-            <td>tida89</td>
-			<td> 029-9877411</td>
-			<td width="18%" class="hidden-xs"><div align="right"><a  class="btn btn-danger btn-sm" onClick="return confirm('กรุณายืนยันการลบอีกครั้ง !!!')"> <span class="glyphicon glyphicon-trash"></span> ลบ </a> <a href="member_list_edit.php" class="btn btn-default btn-sm"> <span class="glyphicon glyphicon-edit"></span> แก้ไข </a> </div></td>
-          </tr>
+		  <?PHP } ?>
         </tbody>
       </table>
     

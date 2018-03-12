@@ -16,45 +16,51 @@
             <th width="14%" class="hidden-xs">รายละเอียด</th>
             <th width="15%" >ราคา Member </th>
 			<th width="16%">ราคา Normal </th>
-			<th width="25%" ><div align="right">จัดการ</div></th>
+			<th width="25%" ><div align="center">จัดการ</div></th>
           </tr>
         </thead>
         <tbody>
+		
+		<?PHP 
+include "config.inc.php"; 
+$sql="SELECT * FROM tbl_package"; 
+$query = $conn->query($sql); 
+$i=0;
+while($result = $query->fetch_assoc()) 
+{ 
+$i++;
+?>
+<tr>
+            <th scope="row"><div align="center"><?=$i;?></div></th>
+			
+            <td><div align="left"><?=$result['pack_name'];?></div></td>
+			
+			
+			
+            <td><div align="center"> <?=$result['pack_detail'];?></div></td>
+			
+			<td class="hidden-xs"> <div align="center"><?=$result['pack_member_price'];?></div></td>
+			<td class="hidden-xs"> <div align="center"><?=$result['pack_normal_price'];?></div></td>
+			<td width="27%"><div align="center">
+			
+				<a href="member_del.php?cus_id=<?=$result[''];?>" class="btn btn-danger btn-sm" onClick="return confirm('กรุณายืนยันการลบอีกครั้ง !!!')"> <span class="glyphicon glyphicon-trash"></span> ลบ </a> 
+			
+			
+			
+			<a href="member_list_edit.php" class="btn btn-default btn-sm"> <span class="glyphicon glyphicon-edit"></span> แก้ไข </a>
+			
+			
+			
 
-          <tr>
-            <th scope="row"><div align="center">1</div></th>
-            <td><div align="center">ล้างสีดูดฝุ่น</div></td>
-            <td class="hidden-xs"><div align="center">......</div></td>
-			<td> <div align="center">250</div></td>
-			<td> <div align="center">350 </div></td>
-			
-            <td width="25%" ><div align="right">
-			
-			
-			
-			
-			<a href="#" class="btn btn-danger btn-sm" onClick="return confirm('กรุณายืนยันการลบอีกครั้ง !!!')"> <span class="glyphicon glyphicon-trash"></span> ลบ </a> <a href="package_list_edit.php" class="btn btn-default btn-sm"> <span class="glyphicon glyphicon-edit"></span> แก้ไข </a>  </div></td>
+			  
+			  </div></td>
           </tr>
-		  
-		  
-		  <tr>
-            <th scope="row"><div align="center">2</div></th>
-            <td><div align="center">ล้างอัดฉีด</div></td>
-            <td class="hidden-xs"><div align="center">......</div></td>
-			<td> <div align="center">150</div></td>
-			<td> <div align="center">200 </div></td>
-			
-            <td width="25%" ><div align="right"> 
-			
-			
-		<a href="#" class="btn btn-danger btn-sm" onClick="return confirm('กรุณายืนยันการลบอีกครั้ง !!!')"> <span class="glyphicon glyphicon-trash"></span> ลบ </a> <a href="package_list_edit.php" class="btn btn-default btn-sm"> <span class="glyphicon glyphicon-edit"></span> แก้ไข </a> 
-			
-			
-			
-			</div></td>
-          </tr>
+		  <?PHP } ?>
         </tbody>
       </table>
+    
+   
+       
     
       <hr>
 </div>

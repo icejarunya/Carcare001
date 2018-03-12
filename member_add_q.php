@@ -8,7 +8,7 @@
 
 
 
-echo "<META http-equiv=refresh content=0;url=index2.php>";  
+echo "<META http-equiv=refresh content=0;url=member_list.php>";  
 ?> 
  
  

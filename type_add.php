@@ -17,11 +17,7 @@
 <div class="form-group row">
       <label for="inputEmail3" class="col-sm-2 col-form-label">ชื่อประเภทรถ</label>
     <div class="col-sm-10">
-       <select name="type_name" id="type_name">
-         <option value="1">SUV</option>
-         <option value="2">Sedan</option>
-         <option value="3">Van</option>
-                            </select>
+       <input  name="type_name" type="text" class="form-control" id="type_name" placeholder="ชื่อประเภทรถ" required="required">
        <label></label>
      </div> 
 </div>

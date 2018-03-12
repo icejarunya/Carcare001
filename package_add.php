@@ -26,12 +26,19 @@
   <div class="form-group row">
       <label for="inputEmail3" class="col-sm-2 col-form-label">รายละเอียด </label>
       <div class="col-sm-10">
-       <input type="text"  name="pack_detail" class="form-control" id="pack_detail" placeholder="รายละเอียด" required="required">
-	   
+        <p>
+          <input type="text"  name="pack_detail" class="form-control" id="pack_detail" placeholder="รายละเอียด" required="required">
+        </p>
      </div> 
 </div>
 
-  
+  <div class="form-group row">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">ระยะเวลาของแต่ละเเพ็คเกจ </label>
+      <div class="col-sm-10">
+       <input type="text"  name="pack_duration" class="form-control" id="pack_duration" placeholder="ระยะเวลาของแต่ละเเพ็คเกจ" required="required">
+	   
+     </div> 
+</div>
   
   <div class="form-group row">
       <label for="inputEmail3" class="col-sm-2 col-form-label">ราคา Member</label>
@@ -51,6 +58,13 @@
      </div> 
 </div>
 
+<div class="form-group row">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">วันสิ้นสุดราคาเเพ็คเกจ</label>
+      <div class="col-sm-10">
+       <input type="text"  name="pack_end_date" class="form-control" id="pack_end_date" placeholder="วันสิ้นสุดราคาเเพ็คเกจ" required="required">
+	   
+     </div> 
+</div>
 
 
 

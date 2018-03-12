@@ -9,7 +9,7 @@ $conn->query($sql);
 
 
 
-echo "<META http-equiv=refresh content=0;url=custumer_list.php>";  
+echo "<META http-equiv=refresh content=0;url=s_car_list.php>";  
 
 
 ?>
