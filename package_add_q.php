@@ -8,7 +8,7 @@ $conn->query($sql);
 
 
 
-echo "<META http-equiv=refresh content=0;url=index2.php>";  
+echo "<META http-equiv=refresh content=0;url=package_list.php>";  
 ?> 
  
  

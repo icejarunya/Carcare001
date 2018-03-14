@@ -1,3 +1,6 @@
+<?PHP 
+	session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -103,13 +106,24 @@ body {
 		<ul class="nav navbar-nav navbar-right">
 		
 					
-<li><p class="navbar-text"> <i class='glyphicon glyphicon-user'></i> ยินดีต้อนรับ : คุณจรัญญา บุญญา</li>
+
+<?PHP if(isset($_SESSION["cus_id"])){?>
+
+<li><a href="history.php"><i class='glyphicon glyphicon-user'></i> ยินดีต้อนรับ : คุณ <?=$_SESSION["cus_name"];?></a></li>
+
+<?PHP }?>
+
+<?PHP if(isset($_SESSION["staff_id"])){?>
+
+<li><a href="book_list.php"><i class='glyphicon glyphicon-user'></i> เจ้าหน้าที่ <?=$_SESSION["staff_name"];?></a></li>
+
+<?PHP }?>
 
 <li><a href="logout.php"><i class='glyphicon glyphicon-off'></i> ออกจากระบบ</a></li>
 				
 					
       
-                </ul>
+              </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
@@ -122,15 +136,45 @@ body {
   <div class="panel-body">
   <div class="row content">
     <div class="col-sm-3 sidenav">
+	<?PHP if(isset($_SESSION["cus_id"])){?>
       <h4>ยินดีต้อนรับ ลูกค้า</h4>
       <ul class="nav nav-pills nav-stacked">
-        <li class="active"><a href="index1.php">เมนู</a></li>
+        <li class="active"><a href="index_part1.php">เมนู</a></li>
         <li><a href="custumer_edit.php">แก้ไขข้อมูลส่วนตัว</a></li>
-		<li><a href="car_list.php">ข้อมูลรถ</a></li>
+		<li><a href="car_customer.php">ข้อมูลรถ</a></li>
+		 <li><a href="book_car.php">จองคิวล้างรถ</a></li>
         <li><a href="history.php">ประวัติการจองคิว</a></li>
-        <li><a href="package.php">จองคิวล้างรถ</a></li>
-      </ul><br>
-    
-    </div>
+       
+      </ul>
+	  <?PHP }?>
+	  
+	  
+	  <?PHP if(isset($_SESSION["staff_id"])){?>
+	  
+      <h4>ยินดีต้อนรับ ผู้ดูแลระบบ</h4>
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="index2.php">เมนู</a></li>
+        <li><a href="custumer_list.php">ข้อมูลลูกค้า</a></li>
+		<li><a href="member_list.php">ข้อมูลผู้ใช้ระบบ</a></li>
+        <li><a href="s_car_list.php">ข้อมูลรถ</a></li>
+        <li><a href="package_list.php">ข้อมูลแพ็คเกจ</a></li>
+		 <li><a href="type_list.php">ข้อมูลประเภทรถ</a></li>
+		
+		   <li><a href="acc_list.php">ข้อมูลอุปกรณ์ติดรถ</a></li>
+		    <li><a href="book_list.php">รายการจองคิวล้างรถ</a></li>
+<li><a href="report.php">รายงานสรุปผลรายได้</a></li>
+<li><a href="report1.php">รายงานสรุปผลการจองคิวล้างรถ</a></li>
+<li><a href="report2.php">รายงานผลการทำงานของพนักงาน</a></li>
+    <?PHP }?>
+    </div> 
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
  <div class="col-sm-9">

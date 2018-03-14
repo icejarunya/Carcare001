@@ -1,4 +1,4 @@
-<?PHP include"header2.php";?>
+<?PHP include"header1.php";?>
 
 
 
@@ -13,37 +13,49 @@
           <tr>
             <th width="7%">ลำดับที่  </th>
             <th width="10%"><div align="left">ประเภทรถ</div></th>
-            <th width="25%" ><div align="right">จัดการ</div></th>
+            <th width="25%" ><div align="center">จัดการ</div></th>
           </tr>
         </thead>
         <tbody>
+		
+		<?PHP 
+include "config.inc.php";
+$sql="SELECT * FROM tbl_type ORDER BY type_name DESC"; 
+$query = $conn->query($sql); 
+$i=0;
+while($result = $query->fetch_assoc()) 
+{ 
+$i++;
+?>
 
-          <tr>
-            <th scope="row"><div align="center">1</div></th>
-            <td><div align="left">Sedan</div></td>
-            <td width="25%" ><div align="right">
+ <tr>
+            <th scope="row"><div align="center"><?=$i;?></div></th>
+			
+            <td><div align="left"><?=$result['type_name'];?></div></td>
+			
+			<td width="27%"><div align="center">
+			
+			
+			<a href="type_del.php?type_id=<?=$result['type_id'];?>" class="btn btn-danger btn-sm" onClick="return confirm('กรุณายืนยันการลบอีกครั้ง !!!')"> <span class="glyphicon glyphicon-trash"></span> ลบ </a> 
 			
 			
 			
+			<a href="custumer_edit.php" class="btn btn-default btn-sm"> <span class="glyphicon glyphicon-edit"></span> แก้ไข </a>
 			
-			<a href="#" class="btn btn-danger btn-sm" onClick="return confirm('กรุณายืนยันการลบอีกครั้ง !!!')"> <span class="glyphicon glyphicon-trash"></span> ลบ </a> <a href="type_list_edit.php" class="btn btn-default btn-sm"> <span class="glyphicon glyphicon-edit"></span> แก้ไข </a>  </div></td>
+			
+
+			  
+			  </div></td>
           </tr>
+		  <?PHP } ?>
 		  
 		  
-		  <tr>
-            <th scope="row"><div align="center">2</div></th>
-            <td><div align="left">SUV</div></td>
-            <td width="25%" ><div align="right"> 
-			
-			
-		<a href="#" class="btn btn-danger btn-sm" onClick="return confirm('กรุณายืนยันการลบอีกครั้ง !!!')"> <span class="glyphicon glyphicon-trash"></span> ลบ </a> <a href="type_list_edit.php" class="btn btn-default btn-sm"> <span class="glyphicon glyphicon-edit"></span> แก้ไข </a> 
-			
-			
-			
-			</div></td>
-          </tr>
+		  
+		  
         </tbody>
       </table>
+
+         
     
       <hr>
 </div>

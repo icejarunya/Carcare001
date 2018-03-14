@@ -9,7 +9,7 @@
 <body>
  <h4>เพิ่มข้อมูลรถที่ใช้บริการ </h4>
       <hr>
-<form class="form-horizontal"  method="post" action="car_add_q.php" enctype="multipart/form-data">
+<form class="form-horizontal"  method="post" action="s_car_add_q.php" enctype="multipart/form-data">
 
   <?PHP 
 include "config.inc.php"; 
@@ -86,9 +86,7 @@ while($result1 = $query1->fetch_assoc())
 </div>
 
 
-<?PHP if(isset($_SESSION["cus_id"])){?>
-<input name="car_status" type="hidden" value="1" />
-<?PHP }else{?>
+
   <div class="form-group row">
       <label for="inputEmail3" class="col-sm-2 col-form-label">สถานะรถ</label>
     <div class="col-sm-10">
@@ -102,8 +100,6 @@ while($result1 = $query1->fetch_assoc())
            </label>
      </div> 
 </div>
-
-<?PHP }?>
 
 
 
@@ -146,3 +142,4 @@ while($result1 = $query1->fetch_assoc())
 <p>&nbsp;</p>
 </body>
 </html>
+

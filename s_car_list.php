@@ -1,4 +1,4 @@
-<?PHP include"header2.php";?>
+<?PHP include"header1.php";?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -25,9 +25,9 @@
   </thead>
   <tbody>
   
-  <?PHP 
+<?PHP 
 include "config.inc.php"; 
-$sql="SELECT * FROM tbl_car"; 
+$sql="SELECT * FROM tbl_car , tbl_type  where  tbl_car.type_id=tbl_type.type_id "; 
 $query = $conn->query($sql); 
 $i=0;
 while($result = $query->fetch_assoc()) 
@@ -37,7 +37,7 @@ $i++;
  <tr>
             <th scope="row"><div align="center"><?=$i;?></div></th>
 			
-            <td><div align="left"><?=$result['type_id'];?></div></td>
+            <td><div align="left"><?=$result['type_name'];?></div></td>
 			
 			
             <td><div align="center"> <?=$result['car_gen'];?></div></td>
@@ -46,11 +46,20 @@ $i++;
 			
 			<td class="hidden-xs"> <div align="center"><?=$result['car_liceplat'];?></div></td>
 			
-			<td class="hidden-xs"> <div align="center"><?=$result['car_status'];?></div></td>
+			<td class="hidden-xs"> <div align="center">
+			
+			
+			
+			<?PHP if($result['car_status']==1){?>   Normal   <?PHP }?>
+			<?PHP if($result['car_status']==2){?>   Member   <?PHP }?>
+			
+			
+			
+			</div></td>
 			
 			<td width="27%"><div align="center">
 			
-				<a href="car_del.php?cus_id=<?=$result['car_id'];?>" class="btn btn-danger btn-sm" onClick="return confirm('กรุณายืนยันการลบอีกครั้ง !!!')"> <span class="glyphicon glyphicon-trash"></span> ลบ </a> 
+				<a href="s_car_del.php?car_id=<?=$result['car_id'];?>" class="btn btn-danger btn-sm" onClick="return confirm('กรุณายืนยันการลบอีกครั้ง !!!')"> <span class="glyphicon glyphicon-trash"></span> ลบ </a> 
 			
 			
 			

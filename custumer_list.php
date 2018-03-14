@@ -1,4 +1,4 @@
-<?PHP include"header2.php";?>
+<?PHP include"header1.php";?>
 
 
 
@@ -40,8 +40,6 @@ $i++;
             <th scope="row"><div align="center"><?=$i;?></div></th>
 			
             <td><div align="left"><?=$result['cus_name'];?></div></td>
-			
-			
 			
             <td><div align="center"> <?=$result['cus_username'];?></div></td>
 			

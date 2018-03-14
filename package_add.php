@@ -1,4 +1,4 @@
-<?PHP include"header2.php";?>
+<?PHP include"header1.php";?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -12,6 +12,32 @@
 <form class="form-horizontal"  method="post" action="package_add_q.php" enctype="multipart/form-data">
 
   
+
+<div class="form-group row">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">ประเภทรถ</label>
+    <div class="col-sm-10">
+         
+	   
+           <label>
+           <select name="type_id" class="form-control">
+		   
+		   <?PHP 
+include "config.inc.php"; 
+$sql1="SELECT * FROM tbl_type"; 
+$query1 = $conn->query($sql1); 
+while($result1 = $query1->fetch_assoc()) 
+{ 
+
+?>
+             <option value="<?=$result1['type_id'];?>"><?=$result1['type_name'];?></option>
+			 
+<?PHP }?>
+		
+           </select>
+           </label>
+     </div> 
+</div>
+
 
 
 <div class="form-group row">
@@ -61,7 +87,7 @@
 <div class="form-group row">
       <label for="inputEmail3" class="col-sm-2 col-form-label">วันสิ้นสุดราคาเเพ็คเกจ</label>
       <div class="col-sm-10">
-       <input type="text"  name="pack_end_date" class="form-control" id="pack_end_date" placeholder="วันสิ้นสุดราคาเเพ็คเกจ" required="required">
+       <input type="date"  name="pack_end_date" class="form-control" id="pack_end_date" placeholder="วันสิ้นสุดราคาเเพ็คเกจ" required="required">
 	   
      </div> 
 </div>

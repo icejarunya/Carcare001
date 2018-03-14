@@ -7,7 +7,7 @@
 </head>
 
 <body>
- <h4>แก้ไขข้อมูล</h4>
+ <h4>แก้ไขข้อมูลลูกค้า</h4>
       <hr>
 <form class="form-horizontal"  method="post" action="" enctype="multipart/form-data">
 

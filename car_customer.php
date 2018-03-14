@@ -7,9 +7,9 @@
 </head>
 
 <body>
- <h4>ข้อมูลรถ</h4>
+ <h4>ข้อมูลรถ <a href="car_add.php?cus_id=<?=$_SESSION['cus_id'];?>" class="btn btn-default btn-sm"> <span class="glyphicon glyphicon-plus"></span> เพิ่มรถ </a> </h4>
       <hr>
-      <p> <a href="s_car_add.php" class="btn btn-default btn-sm"> <span class="glyphicon glyphicon-edit"></span> เพิ่มรถ </a> &nbsp;</p>
+
 <table width="100%" class="table table-striped">
   <thead>
     <tr>
@@ -24,7 +24,10 @@
    
     	<?PHP 
 include "config.inc.php"; 
-$sql="SELECT * FROM tbl_car"; 
+$cus_id1=$_SESSION['cus_id'];
+
+
+$sql="SELECT * FROM tbl_car where cus_id=$cus_id1"; 
 $query = $conn->query($sql); 
 $i=0;
 while($result = $query->fetch_assoc()) 
@@ -39,7 +42,11 @@ $i++;
             <td><div align="center"><?=$result['car_gen'];?></div></td>
 			  <td><div align="center"><?=$result['car_brand'];?></div></td>
 			    <td><div align="center"><?=$result['car_liceplat'];?></div></td>  
-				<td><div align="center"><?=$result['car_status'];?></div></td>
+				<td><div align="center">	
+				
+				
+				<?PHP if($result['car_status']==1){?>   Normal   <?PHP }?>
+			<?PHP if($result['car_status']==2){?>   Member   <?PHP }?></div></td>
 				
 			<td width="27%"><div align="center">
 			

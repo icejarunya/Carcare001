@@ -1,6 +1,3 @@
-<?PHP 
-	session_start();
-?>
 <?PHP
 
 include"config.inc.php";//ไฟล์ติดต่อฐานข้อมูล
@@ -11,15 +8,10 @@ $sql="INSERT INTO tbl_car (car_id, cus_id, type_id, car_liceplat, car_gen, car_b
 $conn->query($sql);
 
 
-if(isset($_SESSION["cus_id"])){
-
-echo "<META http-equiv=refresh content=0;url=car_customer.php>";  
-
-}else{
 
 echo "<META http-equiv=refresh content=0;url=s_car_list.php>";  
 
-}
+
 ?>
  
 </html>

@@ -1,4 +1,4 @@
-<?PHP include"header2.php";?>
+<?PHP include"header1.php";?>
 <!DOCTYPE HTML>
 <html>
 <head>

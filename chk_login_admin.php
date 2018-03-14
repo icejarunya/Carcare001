@@ -7,7 +7,7 @@
 <?PHP
 
 
- $sql = "select * from tbl_customer where  cus_username='$_POST[cus_username]' and cus_password='$_POST[cus_password]'"; 
+ $sql = "select * from tbl_staff where  staff_username='$_POST[staff_username]' and staff_password='$_POST[staff_password]'"; 
 $query = $conn->query($sql);
 $objResult = $query->fetch_assoc();
 
@@ -24,9 +24,9 @@ alert("NO PASSWORD");
 	else
 	{
 	
-	    $_SESSION["cus_id"] = $objResult["cus_id"];
-		$_SESSION["cus_name"] = $objResult["cus_name"];
-		$_SESSION["cus_username"] = $objResult["cus_username"];
+	    $_SESSION["staff_id"] = $objResult["staff_id"];
+		$_SESSION["staff_name"] = $objResult["staff_name"];
+		$_SESSION["staff_username"] = $objResult["staff_username"];
 	
 	
 	
@@ -37,5 +37,5 @@ alert("NO PASSWORD");
 			
 		
 ?>
-<meta http-equiv='refresh'content='0;url=history.php'>
+<meta http-equiv='refresh'content='0;url=book_list.php'>
 <?PHP }?>

@@ -1,6 +1,5 @@
 <?PHP 
 	session_start();
-
 	include "config.inc.php";
 ?>
 <!DOCTYPE html>
@@ -121,9 +120,22 @@ if(isset($_SESSION["txtuser"]) =="") {
 	
 	
 	
-	<li><p class="navbar-text"> <i class='glyphicon glyphicon-user'></i> ยินดีต้อนรับ : คุณ<?PHP echo $_SESSION["cus_name"];?></p></li>
+
 	
-	
+
+
+<?PHP if(isset($_SESSION["cus_id"])){?>
+
+<li><a href="history.php"><i class='glyphicon glyphicon-user'></i> ยินดีต้อนรับ : คุณ <?=$_SESSION["cus_name"];?></a></li>
+
+<?PHP }?>
+
+<?PHP if(isset($_SESSION["staff_id"])){?>
+
+<li><a href="book_list.php"><i class='glyphicon glyphicon-user'></i> เจ้าหน้าที่ <?=$_SESSION["staff_name"];?></a></li>
+
+<?PHP }?>
+
 	
 	<li>
      <a href="logout.php"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> ออกจากระบบ</a>

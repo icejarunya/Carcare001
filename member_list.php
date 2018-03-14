@@ -1,4 +1,4 @@
-<?PHP include"header2.php";?>
+<?PHP include"header1.php";?>
 
 
 
@@ -44,7 +44,7 @@ $i++;
 			
 			<td width="27%"><div align="center">
 			
-				<a href="member_del.php?cus_id=<?=$result['staff_id'];?>" class="btn btn-danger btn-sm" onClick="return confirm('กรุณายืนยันการลบอีกครั้ง !!!')"> <span class="glyphicon glyphicon-trash"></span> ลบ </a> 
+				<a href="member_del.php?staff_id=<?=$result['staff_id'];?>" class="btn btn-danger btn-sm" onClick="return confirm('กรุณายืนยันการลบอีกครั้ง !!!')"> <span class="glyphicon glyphicon-trash"></span> ลบ </a> 
 			
 			
 			

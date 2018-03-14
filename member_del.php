@@ -1,10 +1,10 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Untitled Document</title>
-</head>
+<?PHP 
 
-<body>
-</body>
-</html>
+include "config.inc.php"; // ไฟล์ติดต่อฐานข้อมูล
+
+$sql = "DELETE FROM  tbl_staff  WHERE  tbl_staff.staff_id   = $_GET[staff_id];"; 
+$conn->query($sql); 
+
+echo "<META http-equiv=refresh content=0;url=member_list.php>"; 
+?> 
+ 
