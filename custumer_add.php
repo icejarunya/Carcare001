@@ -36,7 +36,7 @@
   <div class="form-group row">
       <label for="inputEmail3" class="col-sm-2 col-form-label">เบอร์โทร</label>
       <div class="col-sm-10">
-           <input type="text"  name="cus_tel" class="form-control" id="cus_tel" placeholder="เบอร์โทร" required="required">
+           <input  name="cus_tel" type="text" class="form-control" id="cus_tel" maxlength="10" placeholder="เบอร์โทร" required="required">
 	   
      </div> 
 </div>
