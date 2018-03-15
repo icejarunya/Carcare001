@@ -63,7 +63,7 @@ $i++;
 			
 			
 			
-			<a href="car_list_edit.php" class="btn btn-default btn-sm"> <span class="glyphicon glyphicon-edit"></span> แก้ไข </a>
+			<a href="s_car_list_edit.php?car_id=<?=$result['car_id'];?>" class="btn btn-default btn-sm"> <span class="glyphicon glyphicon-edit"></span> แก้ไข </a>
 			
 			
 			

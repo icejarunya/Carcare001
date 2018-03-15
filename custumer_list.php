@@ -52,7 +52,7 @@ $i++;
 			
 			
 			
-			<a href="custumer_edit.php" class="btn btn-default btn-sm"> <span class="glyphicon glyphicon-edit"></span> แก้ไข </a>
+			<a href="custumer_edit.php?cus_id=<?=$result['cus_id'];?>" class="btn btn-default btn-sm"> <span class="glyphicon glyphicon-edit"></span> แก้ไข </a>
 			
 			
 			

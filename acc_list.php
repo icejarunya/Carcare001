@@ -1,4 +1,4 @@
-<?PHP include"header2.php";?>
+<?PHP include"header1.php";?>
 
 
 
@@ -6,44 +6,58 @@
    
       <h4>ข้อมูลอุปกรณ์ติดมากับรถรถ</h4>
       <hr>
-      <h2><span class="glyphicon glyphicon-flash"></span> ข้อมูลอุปกรณ์มากับติดรถ</h2>
+      <h2><span class="glyphicon glyphicon-flash"></span> ข้อมูลอุปกรณ์ติดมากับรถ</h2>
     <a href="acc_add.php" class="btn btn-default btn-sm"> <span class="glyphicon glyphicon-plus"></span> เพิ่มอุปกรณ์ติดมากับรถ </a> 
       <table width="100%" class="table table-striped">
         <thead>
           <tr>
             <th width="7%">ลำดับที่  </th>
             <th width="10%"><div align="left">ชื่ออุปกรณ์</div></th>
-			<th width="25%"><div align="right">จัดการ</div></th>
+			<th width="25%"><div align="center">จัดการ</div></th>
           </tr>
         </thead>
         <tbody>
+		
+		<?PHP 
+include "config.inc.php"; 
+$sql="SELECT * FROM tbl_accessories"; 
+$query = $conn->query($sql); 
+$i=0;
+while($result = $query->fetch_assoc()) 
+{ 
+$i++;
+?>
+
 
           <tr>
-            <th scope="row"><div align="center">1</div></th>
-            <td><div align="left">นวมหุ้มเบลท์</div></td>
-			<td width="25%"><div align="right">
+            <th scope="row"><div align="center"><?=$i;?></div></th>
+			
+            <td><div align="left"><?=$result['acc_name'];?></div></td>
+				
+			<td width="27%"><div align="center">
+			
+			
+			<a href="acc_del.php?acc_id=<?=$result['acc_id'];?>" class="btn btn-danger btn-sm" onClick="return confirm('กรุณายืนยันการลบอีกครั้ง !!!')"> <span class="glyphicon glyphicon-trash"></span> ลบ </a> 
 			
 			
 			
+			<a href="acc_edit.php?acc_id=<?=$result['acc_id'];?>" class="btn btn-default btn-sm"> <span class="glyphicon glyphicon-edit"></span> แก้ไข </a>
 			
-			<a href="#" class="btn btn-danger btn-sm" onClick="return confirm('กรุณายืนยันการลบอีกครั้ง !!!')"> <span class="glyphicon glyphicon-trash"></span> ลบ </a> <a href="acc_list_edit.php" class="btn btn-default btn-sm"> <span class="glyphicon glyphicon-edit"></span> แก้ไข </a>  </div></td>
+			
+			
+			<a href="car_add.php?cus_id=<?=$result['acc_id'];?>" class="btn btn-default btn-sm"> <span class="glyphicon glyphicon-plus"></span> เพิ่มรถ </a> 
+			  
+			  </div></td>
           </tr>
+		  <?PHP } ?>
 		  
 		  
-		  <tr>
-            <th scope="row"><div align="center">2</div></th>
-            <td><div align="left">หมอนรองคอ</div></td>
-			<td width="25%" ><div align="right"> 
-			
-			
-		<a href="#" class="btn btn-danger btn-sm" onClick="return confirm('กรุณายืนยันการลบอีกครั้ง !!!')"> <span class="glyphicon glyphicon-trash"></span> ลบ </a> <a href="acc_list_edit.php" class="btn btn-default btn-sm"> <span class="glyphicon glyphicon-edit"></span> แก้ไข </a> 
-			
-			
-			
-			</div></td>
-          </tr>
+		  
+		  
         </tbody>
       </table>
+
+          
     
       <hr>
 </div>

@@ -40,7 +40,7 @@ $i++;
 			
 			
 			
-			<a href="custumer_edit.php" class="btn btn-default btn-sm"> <span class="glyphicon glyphicon-edit"></span> แก้ไข </a>
+			<a href="type_list_edit.php?type_id=<?=$result['type_id'];?>" class="btn btn-default btn-sm"> <span class="glyphicon glyphicon-edit"></span> แก้ไข </a>
 			
 			
 

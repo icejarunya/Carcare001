@@ -48,7 +48,7 @@ $i++;
 			
 			
 			
-			<a href="member_list_edit.php" class="btn btn-default btn-sm"> <span class="glyphicon glyphicon-edit"></span> แก้ไข </a>
+			<a href="member_list_edit.php?staff_id=<?=$result['staff_id'];?>" class="btn btn-default btn-sm"> <span class="glyphicon glyphicon-edit"></span> แก้ไข </a>
 			
 			
 			
