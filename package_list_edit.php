@@ -27,8 +27,8 @@ $result = $query->fetch_assoc();
          
 	   
            <label>
-           <select name="type_id" class="form-control">
-		   
+
+<select name="type_id" class="form-control">		   
 		   <?PHP 
 include "config.inc.php"; 
 $sql1="SELECT * FROM tbl_type"; 
@@ -37,11 +37,11 @@ while($result1 = $query1->fetch_assoc())
 { 
 
 ?>
-             <option value="<?=$result1['type_id'];?>"><?=$result1['type_name'];?></option>
-			 
+		     <option value="<?=$result1['type_id'];?>" <?php if (!(strcmp($result1['type_id'], $result['type_id']))) {echo "selected=\"selected\"";} ?>><?=$result1['type_name'];?></option>
+			
 <?PHP }?>
 		
-           </select>
+            </select>
            </label>
     </div> 
 </div>

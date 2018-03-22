@@ -37,7 +37,9 @@ $i++;
  <tr>
             <th scope="row"><div align="center"><?=$i;?></div></th>
 			
-            <td><div align="left"><?=$result['type_name'];?></div></td>
+            <td><div align="center">
+              <?=$result['type_name'];?>
+            </div></td>
 			
 			
             <td><div align="center"> <?=$result['car_gen'];?></div></td>

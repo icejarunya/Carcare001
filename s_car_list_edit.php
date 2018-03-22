@@ -27,7 +27,7 @@ $result = $query->fetch_assoc();
       <label for="inputEmail3" class="col-sm-2 col-form-label"> ชื่อ - สกุล </label>
       <div class="col-sm-10">
          คุณ ปนัดดา จินเดหวา
-         <input type="hidden" name="cus_id" value="<?=$result['cus_id'];?>" />
+         <input type="hidden" name="car_id" value="<?=$result['car_id'];?>" />
     </div> 
 </div>
 	
@@ -69,8 +69,8 @@ $result = $query->fetch_assoc();
          
 	   
            <label>
-           <select name="type_id" class="form-control">
-		   
+           
+		<select name="type_id" class="form-control">   
 		   <?PHP 
 include "config.inc.php"; 
 $sql1="SELECT * FROM tbl_type"; 
@@ -79,11 +79,11 @@ while($result1 = $query1->fetch_assoc())
 { 
 
 ?>
-             <option value="<?=$result1['type_id'];?>"><?=$result1['type_name'];?></option>
-			 
+		     <option value="<?=$result1['type_id'];?>" <?php if (!(strcmp($result1['type_id'], $result['type_id']))) {echo "selected=\"selected\"";} ?>><?=$result1['type_name'];?></option>
+			
 <?PHP }?>
-		
-           </select>
+		 </select>
+           
            </label>
     </div> 
 </div>
@@ -97,8 +97,8 @@ while($result1 = $query1->fetch_assoc())
 	   
            <label>
            <select name="car_status" class="form-control" >
-             <option value="1">Normal</option>
-             <option value="2">Member</option>
+             <option value="1" <?php if (!(strcmp(1, $result['car_status']))) {echo "selected=\"selected\"";} ?>>Normal</option>
+             <option value="2" <?php if (!(strcmp(2, $result['car_status']))) {echo "selected=\"selected\"";} ?>>Member</option>
            </select>
            </label>
     </div> 
@@ -109,7 +109,7 @@ while($result1 = $query1->fetch_assoc())
   <div class="form-group row">
       <label for="inputEmail3" class="col-sm-2 col-form-label">วันที่สิ้นสุด</label>
       <div class="col-sm-5">
-		    <input  name="car_dateend_mem" type="date" class="form-control" id="car_dateend_mem" value="<?=$result['lateend_mem'];?>" placeholder="ทะเบียนรถ" >
+		    <input  name="car_dateend_mem" type="date" class="form-control" id="car_dateend_mem" value="<?=$result['car_dateend_mem'];?>" placeholder="ทะเบียนรถ" >
      </div> 
 </div>
 
@@ -133,7 +133,7 @@ while($result1 = $query1->fetch_assoc())
       <div class="form-group row">
       <label for="inputEmail3" class="col-sm-2 col-form-label"></label>
       <div class="col-sm-10">
-	   <button type="submit" class="btn btn-default"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> เพิ่มข้อมูลรถ </button> 
+	   <button type="submit" class="btn btn-default"> <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> แก้ไขข้อมูลรถ </button> 
 	   
      </div> 
 </div>

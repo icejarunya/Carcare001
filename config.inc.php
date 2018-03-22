@@ -4,7 +4,7 @@
  $serverName = "localhost";  
   $userName = "root"; 
    $userPassword = "";  
-   $dbName = "db_carcare"; // ชื่อฐานขอ้มูล 
+   $dbName = "db_carcare"; // ชื่อฐานข้อมูล 
    
    
    

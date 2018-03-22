@@ -139,8 +139,8 @@ body {
 	<?PHP if(isset($_SESSION["cus_id"])){?>
       <h4>ยินดีต้อนรับ ลูกค้า</h4>
       <ul class="nav nav-pills nav-stacked">
-        <li class="active"><a href="index_part1.php">เมนู</a></li>
-        <li><a href="custumer_edit.php">แก้ไขข้อมูลส่วนตัว</a></li>
+        <li class="active"><a href="">เมนู</a></li>
+        <li><a href="custumer_edit.php?cus_id=<?=$_SESSION['cus_id'];?>">แก้ไขข้อมูลส่วนตัว</a></li>
 		<li><a href="car_customer.php">ข้อมูลรถ</a></li>
 		 <li><a href="book_car.php">จองคิวล้างรถ</a></li>
         <li><a href="history.php">ประวัติการจองคิว</a></li>
@@ -153,7 +153,7 @@ body {
 	  
       <h4>ยินดีต้อนรับ ผู้ดูแลระบบ</h4>
       <ul class="nav nav-pills nav-stacked">
-        <li class="active"><a href="index2.php">เมนู</a></li>
+        <li class="active"><a href="">เมนู</a></li>
         <li><a href="custumer_list.php">ข้อมูลลูกค้า</a></li>
 		<li><a href="member_list.php">ข้อมูลผู้ใช้ระบบ</a></li>
         <li><a href="s_car_list.php">ข้อมูลรถ</a></li>
